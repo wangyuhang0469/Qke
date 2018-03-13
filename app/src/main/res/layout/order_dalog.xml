@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clickable="false"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="25dp"
+    android:background="#00000000">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/yuanjiao_bg">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/theme">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:padding="11dp"
+                android:src="@drawable/close"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:textSize="17dp"
+                android:text="选择申办事项"/>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="领证业务类："
+            android:background="@color/base_bg"
+            android:layout_height="20dp"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="领取不动产权证书及登记证明"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/text1"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="房地产现楼抵押业务类："
+            android:layout_height="20dp"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:background="@color/base_bg"/>
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="一般抵押权首次登记-现售（现楼抵押）"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/text1"
+            android:layout_marginLeft="16dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="最高额抵押权首次登记"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/text1"
+            android:layout_marginLeft="16dp"/>
+
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:background="@color/base_bg"
+            android:text="房地产注销抵押业务类:："
+            android:layout_height="20dp"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="抵押权注销登记"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/text1"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:text="二手商品房转移业务类："
+            android:layout_height="20dp"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:paddingLeft="8dp"
+            android:background="@color/base_bg"/>
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="二手商品房转移登记（二手房买卖）"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:textColor="@color/text1"
+            android:layout_marginLeft="16dp"/>
+
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

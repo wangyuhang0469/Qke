@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    tools:context="com.example.wang.qke.ui.tools.RecordDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/base_bg">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="9dp"
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:id="@+id/owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="权利人："
+                android:textColor="@color/theme"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:id="@+id/idNum_ownerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份证："
+                android:textColor="@color/theme"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:id="@+id/zslx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="证书类别："
+                android:textColor="@color/theme"/>
+
+        </LinearLayout>
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp"
+            android:layout_marginBottom="9dp">
+            <TextView
+                android:id="@+id/certNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="房产证号："
+                android:textColor="@color/theme"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="查询结果"
+            android:textColor="#222"
+            android:gravity="center"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="6dp"/>
+
+
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/desc"
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingMultiplier="1.3"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="国土局过户价：" />
+
+            <TextView
+                android:id="@+id/housePrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#d81e06" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="此结果来自深圳市房地产信息中心"
+            android:textColor="#d81e06"
+            android:gravity="center"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:background="@drawable/btn_my"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:text="计算税费"
+        android:textColor="@color/white"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/allTax"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="税费合计"
+            android:textColor="#222"
+            android:gravity="center"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="6dp"
+            android:textSize="14dp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/suggest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="#d81e06"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="3dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="税费详细"
+            android:textColor="#222"
+            android:gravity="center"
+            android:layout_marginLeft="6dp"/>
+
+        <LinearLayout
+
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="增值税：" />
+            <TextView
+                android:id="@+id/valueAddedTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="705,27508元" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="城市维护建设税：" />
+            <TextView
+                android:id="@+id/maintenanceTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="49,369,26元" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="教育费附加：" />
+            <TextView
+                android:id="@+id/educationSurtax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="21,158,25元" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="地方教育附加：" />
+            <TextView
+                android:id="@+id/localEducationSurtax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14,105,50元" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:id="@+id/tv001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人所得税(核定)：" />
+
+            <TextView
+                android:id="@+id/personalTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="259,095,56元" />
+        </LinearLayout>
+
+        <LinearLayout
+
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="契税：" />
+            <TextView
+                android:id="@+id/transactionTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="259,095,56元" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="交易手续税：" />
+            <TextView
+                android:id="@+id/procedureTax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="875,72元" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登记税：" />
+            <TextView
+                android:id="@+id/checkExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="80元" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="印花税：" />
+            <TextView
+                android:id="@+id/stampDuty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5元" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp"
+            android:layout_marginBottom="9dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="贴花：" />
+            <TextView
+                android:id="@+id/appliqueExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5元" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

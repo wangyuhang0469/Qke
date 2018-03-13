@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Q客按揭</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="shenfenzheng">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-0123456789()</string>
+    <string name="yanzhengma">-0123456789</string>
+    <string name="number">0123456789.</string>
+    <string name="english">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-.*</string>
+</resources>

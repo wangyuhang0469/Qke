@@ -1,0 +1,152 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/theme</item>
+        <item name="colorPrimaryDark">@color/theme</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="home_title_text">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text1</item>
+    </style>
+    <style name="more">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#999</item>
+    </style>
+    <style name="home_article_title">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">#555</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+    </style>
+    <style name="date">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#999</item>
+        <item name="android:layout_marginLeft">13dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+    </style>
+    <style name="my_bar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">#fff</item>
+        <item name="android:layout_marginBottom">0.5dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+    <style name="my_edit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:background">@drawable/edit_my</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:textColorHint">#aaa</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textCursorDrawable">@null</item>
+
+    </style>
+
+    <style name="MyCustomTabLayout">
+        <!-- 改变指示器下标的颜色-->
+        <item name="tabIndicatorColor">@color/theme</item>
+        <!-- 改变选中字体的颜色-->
+        <item name="tabSelectedTextColor">@color/theme</item>
+        <!-- 改变未选中字体的颜色-->
+        <item name="tabTextColor">#666</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="FullScreenDialog" parent="android:Theme.Dialog">
+
+        <!-- 窗口设为无标题 -->
+        <item name="android:windowNoTitle">true</item>
+
+        <!-- 窗口浮现在activity之上 -->
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@color/title_transparent_black</item>
+
+        <!-- 背景模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+
+        <!-- 全屏 -->
+        <item name="android:windowFullscreen">false</item>
+    </style>
+    <style name="Theme_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="loan_table">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">28dp</item>
+        <item name="android:textColor">@color/theme</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="loan_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">6dp</item>
+        <item name="android:paddingRight">6dp</item>
+    </style>
+
+    <style name="loan_ll.edit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:textColorHint">#aaa</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_marginLeft">20dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">@color/text1</item>
+    </style>
+
+    <style name="order_radio_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">32dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:button">@null</item>
+        <item name="android:textColor">@drawable/radio_button_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/order_select</item>
+    </style>
+
+    <style name="loan_tv">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+
+    <declare-styleable name="GifView">
+        <attr name="gif" format="reference" />
+        <attr name="paused" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CustomTheme">
+        <attr name="gifViewStyle" format="reference" />
+    </declare-styleable>
+
+    <style name="Widget_GifView"></style>
+</resources>

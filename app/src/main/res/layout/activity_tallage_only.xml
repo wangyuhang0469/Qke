@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/titlebar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+
+
+
+
+            <RelativeLayout
+                style="@style/loan_ll">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="购房期限"
+                    android:textColor="@color/text1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg1"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_width="190dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/rb_bg"
+                    android:orientation="horizontal"
+                    android:padding="0.1dp">
+
+
+                    <RadioButton
+                        android:id="@+id/rb1_left"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/radio_button"
+                        android:button="@null"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true"
+                        android:text="未满2年"
+                        android:textColor="@drawable/radio_button_text"
+                        android:textSize="13dp" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#ddd"/>
+                    <RadioButton
+                        android:id="@+id/rb1_middle"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:button="@null"
+                        android:text="满2年"
+                        android:background="@drawable/radio_button"
+                        android:textColor="@drawable/radio_button_text"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"/>
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#ddd"/>
+                    <RadioButton
+                        android:id="@+id/rb1_right"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:singleLine="true"
+                        android:text="满5年"
+                        android:background="@drawable/radio_button"
+                        android:textColor="@drawable/radio_button_text"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        />
+                </RadioGroup>
+
+            </RelativeLayout>
+            <include layout="@layout/line"/>
+
+            <RelativeLayout
+                style="@style/loan_ll">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="唯一住房"
+                    android:textColor="@color/text1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg2"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="135dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/rb_bg"
+                    android:orientation="horizontal"
+                    android:padding="0.1dp">
+
+                    <RadioButton
+                        android:id="@+id/rb2_left"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:button="@null"
+                        android:text="是"
+                        android:background="@drawable/radio_button"
+                        android:textColor="@drawable/radio_button_text"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:checked="true"/>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#ddd"/>
+                    <RadioButton
+                        android:id="@+id/rb2_right"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:singleLine="true"
+                        android:text="否"
+                        android:background="@drawable/radio_button"
+                        android:textColor="@drawable/radio_button_text"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        />
+                </RadioGroup>
+            </RelativeLayout>
+            <include layout="@layout/line"/>
+
+            <RelativeLayout
+                style="@style/loan_ll">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="是否首套"
+                    android:textColor="@color/text1"/>
+
+                <RadioGroup
+                    android:id="@+id/rg3"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="135dp"
+                    android:layout_height="38dp"
+                    android:background="@drawable/rb_bg"
+                    android:orientation="horizontal"
+                    android:padding="0.1dp">
+
+                    <RadioButton
+                        android:id="@+id/rb3_left"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:button="@null"
+                        android:text="是"
+                        android:background="@drawable/radio_button"
+                        android:textColor="@drawable/radio_button_text"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        android:checked="true"/>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:background="#ddd"/>
+                    <RadioButton
+                        android:id="@+id/rb3_right"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:singleLine="true"
+                        android:text="否"
+                        android:background="@drawable/radio_button"
+                        android:textColor="@drawable/radio_button_text"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:paddingLeft="7dp"
+                        android:paddingRight="7dp"
+                        />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout style="@style/loan_ll">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="所在区域"
+                    android:textColor="@color/text1" />
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:hint="请输入"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp"
+                    android:textColor="@color/text1"/>
+
+
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginLeft="150dp"
+                    android:dropDownVerticalOffset="50dp"
+                    />
+
+            </RelativeLayout>
+
+
+
+            <include layout="@layout/line"/>
+
+
+
+
+
+
+            <RelativeLayout style="@style/loan_ll">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="套内建筑面积(㎡)"
+                    android:textColor="@color/text1" />
+
+                <EditText
+                    android:id="@+id/houseArea"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:hint="请输入"
+                    android:inputType="number"
+                    android:digits="@string/number"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/line"/>
+
+            <RelativeLayout style="@style/loan_ll">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="登记价格(元)"
+                    android:textColor="@color/text1" />
+
+                <EditText
+                    android:id="@+id/registerPrice"
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:gravity="right|center"
+                    android:inputType="number"
+                    android:hint="请输入"
+                    android:textCursorDrawable="@null"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="280dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center_horizontal"
+            android:text="确   认"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_my"
+            android:layout_margin="16dp"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:background="#96000000"
+        android:text="查询中..."
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp"
+        android:visibility="gone"/>
+</RelativeLayout>

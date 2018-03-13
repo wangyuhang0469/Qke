@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wang.qke.ui.loan.LoanPlanActivity"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <include layout="@layout/titlebar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="204dp"-->
+                <!--android:background="@drawable/loanplan_bg"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:paddingBottom="10dp">-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/product"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:textSize="17dp"-->
+                        <!--android:layout_marginLeft="16dp"-->
+                        <!--android:layout_marginTop="15dp"-->
+                        <!--/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/company"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:layout_marginLeft="16dp"-->
+                        <!--android:layout_marginTop="16dp"-->
+                        <!--android:textSize="14dp"-->
+                        <!--android:layout_below="@id/product"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/startTime"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:layout_marginLeft="16dp"-->
+                        <!--android:textSize="12dp"-->
+                        <!--android:layout_marginTop="1dp"-->
+                        <!--android:layout_below="@+id/company"-->
+                         <!--/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/endTime"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:layout_toRightOf="@id/startTime"-->
+                        <!--android:layout_marginTop="1dp"-->
+                        <!--android:textSize="12dp"-->
+                        <!--android:layout_below="@id/company"/>-->
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/loanAmount"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_alignParentRight="true"-->
+                        <!--android:layout_centerVertical="true"-->
+                        <!--android:layout_marginRight="18dp"-->
+                        <!--android:textSize="19dp"-->
+                        <!--android:textColor="#fdf27d" />-->
+
+
+
+                <!--</RelativeLayout>-->
+        <!---->
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="#21ffffff"-->
+                    <!--android:layout_marginTop="3dp">-->
+                    <!--<LinearLayout-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:gravity="center">-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/loanRate"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textSize="16dp"/>-->
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:text="贷款利率(%)"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textSize="12dp"-->
+                            <!--/>-->
+                    <!--</LinearLayout>-->
+        <!---->
+                    <!--<View-->
+                        <!--android:layout_width="0.3dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="#fff"-->
+                        <!--android:layout_marginTop="8dp"/>-->
+        <!---->
+                    <!--<LinearLayout-->
+                    <!--android:layout_weight="1.6"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:gravity="center">-->
+                    <!--<TextView-->
+                        <!--android:id="@+id/propertyFloat"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:textSize="16dp"/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:text="房产估值浮动比率(%)"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:textSize="12dp"-->
+                        <!--/>-->
+                <!--</LinearLayout>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="0.3dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="#fff"-->
+                        <!--android:layout_marginTop="8dp"/>-->
+                    <!--<LinearLayout-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:gravity="center">-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/mortgage"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textSize="16dp"/>-->
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:text="抵押成数(%)"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textSize="12dp"-->
+                            <!--/>-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<View-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0.3dp"-->
+                    <!--android:background="#fff"-->
+                    <!--android:layout_marginLeft="12dp"-->
+                    <!--android:layout_marginRight="12dp"/>-->
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:background="#23ffffff">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="center"-->
+                        <!--android:orientation="vertical">-->
+
+                        <!--<TextView-->
+                            <!--android:id="@+id/rateFloat"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:textSize="16dp" />-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:text="利率浮动(%)"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:textSize="12dp" />-->
+                    <!--</LinearLayout>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="0.3dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="#fff"-->
+                        <!--android:layout_marginBottom="8dp"/>-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_weight="1.6"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:gravity="center">-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/overdueAmout"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textSize="16dp"/>-->
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:text="两年内还款逾期次数"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textSize="12dp"-->
+                            <!--/>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="0.3dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="#fff"-->
+                        <!--android:layout_marginBottom="8dp"/>-->
+                    <!--<LinearLayout-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:orientation="vertical"-->
+                        <!--android:gravity="center">-->
+                        <!--<TextView-->
+                            <!--android:id="@+id/speed"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textSize="16dp"/>-->
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:text="审批速度(周)"-->
+                            <!--android:gravity="center_vertical"-->
+                            <!--android:textSize="12dp"-->
+                            <!--/>-->
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/canLoan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500万"
+                        android:textColor="@color/text1"
+                        android:textSize="36sp"
+                        android:layout_marginTop="32dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="可贷额度（元）"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="35dp"/>
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="22dp"
+                    android:layout_marginBottom="22dp"
+                    android:background="#bbb">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="35dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="贷款利率"
+                            android:textColor="#555" />
+
+                        <TextView
+                            android:id="@+id/loanRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/text1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="可贷年限"
+                            android:textColor="#555" />
+
+                        <TextView
+                            android:id="@+id/duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/text1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="抵押成数"
+                            android:textColor="#555" />
+
+                        <TextView
+                            android:id="@+id/mortgage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/text1" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#ddd"/>
+
+            <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="35dp"-->
+                <!--android:background="#fff"-->
+                <!--android:text="基本资料"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:paddingLeft="16dp"-->
+                <!--android:textColor="@color/text1" />-->
+            <!--<View-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0.6dp"-->
+                <!--android:background="#ddd"/>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="温馨提示：最终贷款金额以审批金额为准"
+                    android:layout_marginLeft="16dp"
+                    android:textSize="13dp"
+                    android:textColor="@color/text1"
+                    android:layout_centerVertical="true"
+                    style="@style/loan_tv"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="#ddd"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:text="还款方式"
+                    android:layout_marginLeft="16dp"
+                    style="@style/loan_tv"
+                    android:textSize="13dp"
+                    android:textColor="@color/text1"/>
+
+                <TextView
+                    android:id="@+id/repayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:textColor="@color/text1"
+                    android:gravity="center_vertical"
+                    android:layout_centerVertical="true"
+                    android:textSize="13sp"/>
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:text="最大年龄"-->
+                    <!--android:layout_marginLeft="16dp"-->
+                    <!--style="@style/loan_tv"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/maxAge"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginLeft="120dp"-->
+                    <!--android:textColor="@color/text1"-->
+                    <!--style="@style/loan_tv"/>-->
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:paddingBottom="6dp">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:text="时限"-->
+                    <!--android:layout_marginLeft="16dp"-->
+                    <!--style="@style/loan_tv"/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/duration"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginLeft="120dp"-->
+                    <!--android:textColor="@color/text1"-->
+                    <!--style="@style/loan_tv"/>-->
+            <!--</RelativeLayout>-->
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/base_bg"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#fff"
+                android:text="申请条件"
+                android:gravity="center_vertical"
+                android:paddingLeft="16dp"
+                android:textColor="@color/text1" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.6dp"
+                android:background="#ddd"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:text="加载中..."
+                    android:gravity="center"/>
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/bar"
+                    />
+
+            </RelativeLayout>
+            
+            
+            
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

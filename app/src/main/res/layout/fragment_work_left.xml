@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wang.qke.ui.tools.WorkLeftFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="电话查询"
+            android:textColor="@color/text1"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="6dp"
+            android:textSize="15sp"/>
+
+        <LinearLayout
+            android:id="@+id/call"
+            style="@style/loan_ll"
+            android:layout_marginBottom="9dp">
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:src="@drawable/tools_work_phone"
+                android:layout_marginLeft="12dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="拨打0755-66565656"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_marginLeft="7dp"/>
+        </LinearLayout>
+        <include layout="@layout/line"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="办公编号查询"
+            android:textColor="@color/text1"
+            android:gravity="center"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="6dp"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/edit"
+            style="@style/my_edit"
+            android:layout_width="280dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:hint="请输入办公编号"
+            android:layout_marginTop="30dp"
+            android:textSize="15dp"
+            android:maxLength="30"/>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_height="41dp"
+            android:layout_width="280dp"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_my"
+            android:textColor="@color/white"
+            android:text="确   认"
+            android:layout_marginTop="27dp"
+            android:layout_marginBottom="20dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:background="#96000000"
+        android:text="查询中..."
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp"
+        android:visibility="gone"/>
+
+</RelativeLayout>

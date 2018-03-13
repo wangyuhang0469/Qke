@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_bg"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="权利人(卖家)"
+                android:textColor="@color/text1"/>
+
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="135dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rb_bg"
+                android:orientation="horizontal"
+                android:padding="0.1dp">
+
+                <RadioButton
+                    android:id="@+id/rb1_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:button="@null"
+                    android:text="   个人   "
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:checked="true"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+                <RadioButton
+                    android:id="@+id/rb1_right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:singleLine="true"
+                    android:text="单位"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+        <include layout="@layout/line"/>
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="产权证书"
+                android:textColor="@color/text1"/>
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_width="135dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rb_bg"
+                android:orientation="horizontal"
+                android:padding="0.1dp">
+
+                <RadioButton
+                    android:id="@+id/rb2_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:button="@null"
+                    android:text="房地产权"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:checked="true"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+                <RadioButton
+                    android:id="@+id/rb2_right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:singleLine="true"
+                    android:text="不动产权"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <include layout="@layout/line"/>
+
+        <RelativeLayout style="@style/loan_ll"
+            android:visibility="gone"
+            android:id="@+id/ll_1">
+
+
+            <RadioGroup
+                android:id="@+id/rg3"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="185dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rb_bg"
+                android:orientation="horizontal"
+                android:padding="0.1dp">
+
+                <RadioButton
+                    android:id="@+id/rb3_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:singleLine="true"
+                    android:button="@null"
+                    android:text="粤2015"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:checked="true" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+                <RadioButton
+                    android:id="@+id/rb3_middle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:button="@null"
+                    android:text="粤2016"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+                <RadioButton
+                    android:id="@+id/rb3_right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:singleLine="true"
+                    android:text="粤2017"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="13dp"
+
+                    />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="10dp">
+
+
+
+        <RelativeLayout style="@style/loan_ll"
+            android:id="@+id/shenfenzheng">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="身份证号"
+                android:textColor="@color/text1" />
+
+            <EditText
+                android:id="@+id/idNo"
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:gravity="right|center"
+                android:hint="请输入"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp"
+                android:digits="@string/shenfenzheng"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout style="@style/loan_ll"
+            android:id="@+id/danwei"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="单位名称"
+                android:textColor="@color/text1" />
+
+            <EditText
+                android:id="@+id/ownerName"
+                android:layout_width="230dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="right|center"
+                android:hint="请输入"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/line"/>
+
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="房产证号"
+                android:textColor="@color/text1" />
+
+            <EditText
+                android:id="@+id/certNum"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:gravity="right|center"
+                android:hint="请输入"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp"
+                android:digits="@string/english"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+
+        <include layout="@layout/line"/>
+
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="建筑面积(㎡)"
+                android:textColor="@color/text1" />
+
+            <EditText
+                android:id="@+id/buildArea"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:inputType="number"
+                android:digits="@string/number"
+                android:gravity="right|center"
+                android:hint="请输入"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp"/>
+
+        </RelativeLayout>
+
+        <include layout="@layout/line"/>
+
+
+
+        <RelativeLayout
+            style="@style/loan_ll"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+            <ImageView
+                android:id="@+id/certCode_img"
+                android:layout_width="65dp"
+                android:layout_height="32dp"
+                android:textColor="@color/text1"
+                android:layout_centerVertical="true"/>
+            <EditText
+                android:id="@+id/certCode"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:gravity="right|center"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:digits="@string/english"
+                android:background="@null"
+                android:textCursorDrawable="@null"
+                android:textSize="14dp"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center_horizontal"
+        android:text="查   询"
+        android:textColor="@color/white"
+        android:background="@drawable/btn_my"
+        android:layout_margin="20dp"/>
+
+    </LinearLayout>
+
+
+</ScrollView>
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:background="#96000000"
+        android:text="查询中..."
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp"
+        android:visibility="gone"/>
+</RelativeLayout>

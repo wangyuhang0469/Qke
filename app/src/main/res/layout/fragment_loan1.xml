@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/loan_table"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+
+    <EditText
+        android:id="@+id/loanAmount"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="99dp"
+        android:layout_centerHorizontal="true"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="请输入贷款金额"
+        android:textColorHint="#fff"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:textCursorDrawable="@null"
+        android:paddingRight="3dp"
+        android:digits="@string/number"/>
+
+
+
+
+
+
+
+</RelativeLayout>

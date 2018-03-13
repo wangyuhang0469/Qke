@@ -1,0 +1,421 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.wang.qke.ui.tools.HouseLeftFragment"
+    android:background="@color/base_bg"
+    >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/base_bg"
+        >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:orientation="vertical"
+        android:background="#fff">
+
+            <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="物业" />
+
+            <ImageView
+                android:id="@+id/im_1"
+                android:layout_width="22.5dp"
+                android:layout_height="22.5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2.5dp"
+                android:src="@drawable/my_right" />
+
+            <EditText
+                android:id="@+id/chooseHouse"
+                style="@style/loan_ll.edit"
+                android:layout_width="250dp"
+                android:layout_toLeftOf="@id/im_1"
+                android:gravity="right|center"
+                android:hint="物业名称丨楼栋丨房号" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="建筑面积"/>
+
+            <EditText
+                android:id="@+id/area"
+                android:layout_width="200dp"
+                style="@style/loan_ll.edit"
+                android:layout_alignParentRight="true"
+                android:hint="请输入"
+                android:gravity="right|center" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="获取净值/税费"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb1"
+                android:layout_alignParentRight="true"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:checked="false"
+                app:kswAnimationDuration="300"
+                app:buttonTint="#934"
+                app:kswThumbWidth="26dp"
+                app:kswThumbHeight="26dp"
+                app:buttonTintMode="screen"
+                app:kswThumbMargin="-0.5dp" />
+
+
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="权利人"/>
+
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_height="38dp"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rb_bg"
+                android:orientation="horizontal"
+                android:padding="0.1dp">
+
+                <RadioButton
+                    android:id="@+id/left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:button="@null"
+                    android:text="开"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:checked="true"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+                <RadioButton
+                    android:id="@+id/right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:singleLine="true"
+                    android:text="关"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="登记价格(元)"/>
+
+            <EditText
+                android:id="@+id/registerPrice"
+                android:layout_width="200dp"
+                style="@style/loan_ll.edit"
+                android:layout_alignParentRight="true"
+                android:hint="请输入"
+                android:gravity="right|center"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="购房期限" />
+
+            <RadioGroup
+                android:id="@+id/rg2"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_width="170dp"
+                android:layout_height="38dp"
+                android:background="@drawable/rb_bg"
+                android:orientation="horizontal"
+                android:padding="0.1dp">
+
+                <RadioButton
+                    android:id="@+id/rd2_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:singleLine="true"
+                    android:button="@null"
+                    android:text="未满2年"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:paddingLeft="5dp"
+                    android:checked="true"
+                    android:paddingRight="5dp"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+                <RadioButton
+                    android:id="@+id/rd2_middle"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:button="@null"
+                    android:text="满2年"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"/>
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+                <RadioButton
+                    android:id="@+id/rd2_right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:singleLine="true"
+                    android:text="满5年"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="14dp"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="是否唯一住宅"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb2"
+                android:layout_alignParentRight="true"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:checked="false"
+                app:kswAnimationDuration="300"
+                app:buttonTint="#934"
+                app:kswThumbWidth="26dp"
+                app:kswThumbHeight="26dp"
+                app:buttonTintMode="screen"
+                app:kswThumbMargin="-0.5dp" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="是否消费贷款"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb3"
+                android:layout_alignParentRight="true"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:checked="false"
+                app:kswAnimationDuration="300"
+                app:buttonTint="#934"
+                app:kswThumbWidth="26dp"
+                app:kswThumbHeight="26dp"
+                app:buttonTintMode="screen"
+                app:kswThumbMargin="-0.5dp" />
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+
+        <RelativeLayout
+            android:id="@+id/ll_2"
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="成交金额(元)"/>
+
+            <EditText
+                android:id="@+id/transactionPrice"
+                android:layout_width="200dp"
+                style="@style/loan_ll.edit"
+                android:layout_alignParentRight="true"
+                android:hint="请输入"
+                android:gravity="right|center"
+                android:inputType="number"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#ddd"/>
+
+
+            </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:background="@drawable/btn_my"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="确   定"
+        android:textColor="@color/white"/>
+    </LinearLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="150dp"
+        android:layout_height="41dp"
+        android:background="#96000000"
+        android:text="查询中..."
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="62dp"
+        android:visibility="gone"/>
+</RelativeLayout>

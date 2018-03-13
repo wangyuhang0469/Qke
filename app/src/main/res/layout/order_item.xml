@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="9dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/registrationAreaName"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:textColor="@color/text1"
+                android:gravity="center_vertical"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/event"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:textColor="@color/text1"
+                android:gravity="center_vertical" />
+
+
+            <TextView
+                android:id="@+id/bookTime"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/text1" />
+
+            <TextView
+                android:id="@+id/bookCode"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:textColor="@color/text1"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="10dp"/>
+
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="65dp"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_my"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:textColor="#fff"
+            android:gravity="center"/>
+    </RelativeLayout>
+</LinearLayout>

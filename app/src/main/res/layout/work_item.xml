@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_vertical"
+        android:background="#fff"
+        android:paddingTop="9dp">
+
+        <TextView
+            android:id="@+id/docNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="办文编号"
+            android:textColor="@color/text1"
+            android:layout_marginLeft="16dp"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="办理状态"
+            android:textColor="@color/text1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center_vertical"
+        android:text="查询时间"
+        android:paddingLeft="16dp"
+        android:textSize="14.5sp"
+        android:background="#fff"
+        android:paddingBottom="6dp"
+        android:layout_marginBottom="8dp"/>
+
+</LinearLayout>

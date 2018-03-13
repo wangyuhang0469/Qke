@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wang.qke">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon512"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--<activity android:name=".ui.IntroActivity"-->
+            <!--android:theme="@style/Theme.AppCompat.Light.NoActionBar">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--<activity android:name=".MainActivity" />-->
+        <activity android:name=".ui.main.IntroActivity"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+
+        <activity android:name=".ui.myself.LoginActivity" />
+        <activity android:name=".ui.main.WelcomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".base.BaseActivity" />
+        <activity android:name=".ui.loan.LoanActivity" />
+        <activity android:name=".ui.myself.ReUserNameActivity" />
+        <activity android:name=".ui.myself.RePasswordActivity" />
+        <activity android:name=".ui.myself.InviteFriendActivity" />
+        <activity android:name=".ui.tools.HouseActivity" />
+        <activity android:name=".ui.tools.RecordActivity" />
+        <activity android:name=".ui.tools.WorkActivity" />
+        <activity android:name=".ui.tools.OrderActivity" />
+        <activity android:name=".ui.tools.TransferTallageActivity" />
+        <activity android:name=".ui.tools.TransferTallageDetailsActivity" />
+        <activity android:name=".ui.tools.HouseDetailsActivity" />
+        <activity android:name=".ui.tools.RecordDetailsActivity" />
+        <activity android:name=".ui.tools.WorkDetailsActivity" />
+        <activity android:name=".ui.tools.OrderDetailsActivity" />
+        <activity android:name=".ui.myself.RegisterActivity" />
+        <activity android:name=".ui.myself.FindPasswordActivity" />
+        <activity android:name=".ui.articles.InformationActivity" />
+        <activity android:name=".ui.articles.BiblesActivity" />
+        <activity android:name=".ui.articles.ArticleActivity" />
+        <activity android:name=".ui.loan.LoanPlanActivity" />
+        <activity android:name=".ui.loan.LoanListActivity" />
+        <activity android:name=".ui.tools.TallageOnlyActivity" />
+
+
+        <meta-data
+            android:name="QKeAnJie"
+            android:value="1">
+        </meta-data>
+
+    </application>
+
+
+
+</manifest>

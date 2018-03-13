@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/base_bg"
+    tools:context="com.example.wang.qke.ui.tools.RecordDetailsActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:orientation="vertical"
+        android:paddingTop="9dp">
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_001"
+            android:visibility="gone"
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="权利人："
+                android:textColor="@color/text1"/>
+            <TextView
+                android:id="@+id/epName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text1"/>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查询方式："
+                android:textColor="@color/text1"/>
+            <TextView
+                android:id="@+id/inqueryWay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text1"/>
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="房产证号："
+                android:textColor="@color/text1"/>
+            <TextView
+                android:id="@+id/certNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text1"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_002"
+            style="@style/loan_ll"
+            android:layout_height="25dp"
+            android:layout_marginBottom="9dp"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份证："
+                android:textColor="@color/text1"/>
+            <TextView
+                android:id="@+id/idNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#fff"-->
+        <!--android:paddingLeft="11dp"-->
+        <!--android:paddingRight="11dp"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_marginTop="8dp">-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="权利人有房产"-->
+            <!--android:textColor="@color/theme"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="9dp"-->
+            <!--android:layout_marginLeft="6dp"/>-->
+
+
+            <!--<LinearLayout-->
+                <!--style="@style/loan_ll"-->
+                <!--android:layout_height="25dp">-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="产权状态为："-->
+                    <!--android:textColor="@color/text1"/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="抵押"-->
+                    <!--android:textColor="@color/text1"/>-->
+            <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--style="@style/loan_ll"-->
+            <!--android:layout_height="25dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="抵押权人："-->
+                <!--android:textColor="@color/text1"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="上海商业银行有限公司深圳分行"-->
+                <!--android:textColor="@color/text1"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--style="@style/loan_ll"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:layout_marginBottom="8dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="抵押日期："-->
+                <!--android:textColor="@color/text1"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="2016-12-13"-->
+                <!--android:textColor="@color/text1"/>-->
+        <!--</LinearLayout>-->
+        <!--<include layout="@layout/line"/>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="房产详细资料"-->
+            <!--android:textColor="@color/theme"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginLeft="6dp"/>-->
+
+
+        <!--<LinearLayout-->
+            <!--style="@style/loan_ll"-->
+            <!--android:layout_height="25dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="类别："-->
+                <!--android:textColor="@color/text1"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="住宅"-->
+                <!--android:textColor="@color/text1"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--style="@style/loan_ll"-->
+            <!--android:layout_height="25dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="面积："-->
+                <!--android:textColor="@color/text1"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="218.93"-->
+                <!--android:textColor="@color/text1"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--style="@style/loan_ll"-->
+            <!--android:layout_height="25dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="登记价："-->
+                <!--android:textColor="@color/text1"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView3"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="RMB 3167536"-->
+                <!--android:textColor="@color/text1" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--style="@style/loan_ll"-->
+            <!--android:layout_height="25dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="竣工时间："-->
+                <!--android:textColor="@color/text1"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="2006/10/30"-->
+                <!--android:textColor="@color/text1"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--style="@style/loan_ll"-->
+            <!--android:layout_height="25dp">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="查档时间：" />-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="2017-02-25" />-->
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="25dp"-->
+            <!--android:text="此结果来自深圳市房地产信息中心"-->
+            <!--android:textColor="#d81e06"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_marginLeft="6dp"-->
+            <!--android:layout_marginBottom="8dp"/>-->
+
+        <!--</LinearLayout>-->
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bar"
+        />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="再次查询"
+        android:textColor="#fff"
+        android:background="@drawable/btn_my"/>
+
+
+</LinearLayout>

@@ -1,0 +1,444 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.wang.qke.ui.loan.Loan2Fragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp">
+
+
+
+
+        <LinearLayout
+            style="@style/loan_ll">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon31" />
+
+            <EditText
+                android:id="@+id/realname"
+                style="@style/loan_ll.edit"
+                android:hint="姓名"
+                android:maxLength="16"
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <ImageView
+                android:id="@+id/img005"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon32"
+                android:layout_centerVertical="true"
+                />
+            <EditText
+                android:id="@+id/sex"
+                style="@style/loan_ll.edit"
+                android:hint="性别"
+                android:layout_toRightOf="@id/img005"/>
+
+            <Spinner
+                android:id="@+id/spinner7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="26dp"
+                android:dropDownVerticalOffset="50dp"
+                />
+
+        </RelativeLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+
+
+
+        <LinearLayout
+            style="@style/loan_ll">
+
+            <RadioGroup
+                android:id="@+id/rg_ismarriage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_marginLeft="35dp">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:checked="true"
+                    android:paddingRight="60dp"
+                    android:text="已婚"
+                    android:textColor="@color/text1"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingRight="65dp"
+                    android:button="@null"
+                    android:textSize="15dp"
+                    android:textColor="@color/text1"
+                    android:text="未婚"/>
+            </RadioGroup>
+
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+        <LinearLayout
+            android:id="@+id/ll_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:id="@+id/spauseJob"
+                style="@style/loan_ll.edit"
+                android:layout_marginLeft="35dp"
+                android:textColor="@color/text1"
+                android:hint="配偶工作性质" />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="26dp"
+                android:dropDownVerticalOffset="50dp"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:id="@+id/spauseIncome"
+                style="@style/loan_ll.edit"
+                android:hint="配偶工资收入"
+                android:textColor="@color/text1"
+                android:layout_marginLeft="35dp"/>
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="26dp"
+                android:dropDownVerticalOffset="50dp"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/loan_ll">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon32"
+                />
+            <EditText
+                android:id="@+id/mobNum"
+                style="@style/loan_ll.edit"
+                android:inputType="phone"
+                android:hint="手机号"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+
+        <LinearLayout
+            style="@style/loan_ll">
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon33"
+                />
+            <EditText
+                android:id="@+id/idNum"
+                style="@style/loan_ll.edit"
+                android:hint="身份证"
+                android:digits="@string/shenfenzheng"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <ImageView
+                android:id="@+id/img003"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon34"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:layout_toRightOf="@id/img003"
+                android:id="@+id/salaryRange"
+                style="@style/loan_ll.edit"
+                android:textColor="@color/text1"
+                android:hint="工资收入"/>
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_toRightOf="@id/img003"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="18dp"
+                android:dropDownVerticalOffset="50dp"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <ImageView
+                android:id="@+id/img004"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon35"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/occupation"
+                style="@style/loan_ll.edit"
+                android:textColor="@color/text1"
+                android:layout_toRightOf="@id/img004"
+                android:hint="工作性质"/>
+
+            <Spinner
+                android:id="@+id/spinner4"
+                android:layout_toRightOf="@id/img004"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="18dp"
+                android:dropDownVerticalOffset="50dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/base_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp">
+        <RelativeLayout
+            style="@style/loan_ll">
+            <ImageView
+                android:id="@+id/img007"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon36"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:id="@+id/isSZPerson"
+                style="@style/loan_ll.edit"
+                android:hint="是否深户"
+                android:textColor="@color/text1"
+                android:layout_toRightOf="@id/img007"/>
+            <Spinner
+                android:id="@+id/spinner5"
+                android:layout_toRightOf="@id/img007"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="18dp"
+                android:dropDownVerticalOffset="50dp"
+                />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+
+        <RelativeLayout
+            style="@style/loan_ll">
+            <ImageView
+                android:id="@+id/img006"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon9"
+                android:layout_centerVertical="true"
+                />
+            <TextView
+                android:layout_toRightOf="@id/img006"
+                android:id="@+id/socialSec"
+                android:textColor="@color/text1"
+                style="@style/loan_ll.edit"
+                android:hint="是否有社保"/>
+
+            <Spinner
+                android:id="@+id/spinner6"
+                android:layout_toRightOf="@id/img006"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:layout_marginLeft="18dp"
+                android:dropDownVerticalOffset="50dp"
+                />
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/base_bg"/>
+
+        <RelativeLayout
+            style="@style/loan_ll">
+
+            <ImageView
+                android:id="@+id/img011"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/loan_icon22"
+                android:layout_centerVertical="true"/>
+
+            <EditText
+                android:id="@+id/loanAmount"
+                style="@style/loan_ll.edit"
+                android:hint="意愿贷款金额"
+                android:maxLength="8"
+                android:layout_toRightOf="@id/img011"
+                android:inputType="number"
+                />
+            <TextView
+                android:id="@+id/tv9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="万元"
+                android:textColor="@color/text1"
+                android:visibility="gone"
+                android:textSize="15sp"
+                android:layout_toRightOf="@id/img011"
+                android:layout_marginLeft="100dp"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:layout_marginTop="10dp">
+        <RelativeLayout
+                style="@style/loan_ll">
+
+                <ImageView
+                    android:id="@+id/img010"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/loan_icon35"
+                    android:layout_centerVertical="true"/>
+
+                <EditText
+                    android:id="@+id/property"
+                    style="@style/loan_ll.edit"
+                    android:hint="手动输入房产值或"
+                    android:inputType="number"
+                    android:layout_width="wrap_content"
+                    android:layout_toEndOf="@id/img010"
+                    android:maxLength="12"
+                    android:layout_toStartOf="@+id/button"/>
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:background="@drawable/btn_my"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:text="进入世联评估"
+                    android:textColor="#fff"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"/>
+
+
+            <TextView
+                android:id="@+id/tv10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"
+                android:textColor="@color/text1"
+                android:visibility="gone"
+                android:textSize="15sp"
+                android:inputType="number"
+                android:layout_toLeftOf="@id/button"
+                android:layout_marginRight="35dp"
+                android:layout_centerVertical="true"/>
+            </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

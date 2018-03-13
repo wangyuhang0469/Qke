@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/base_bg"
+    tools:context="com.example.wang.qke.ui.tools.RecordDetailsActivity">
+
+    <include layout="@layout/titlebar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_marginTop="9dp"
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="姓名："
+                android:textColor="@color/text1"/>
+            <TextView
+                android:id="@+id/realname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text1"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="身份证："
+                android:textColor="@color/text1"/>
+            <TextView
+                android:id="@+id/idNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text1"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="预约时间："
+                android:textColor="@color/text1"/>
+            <TextView
+                android:id="@+id/bookTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text1"/>
+        </LinearLayout>
+        <LinearLayout
+            style="@style/loan_ll"
+            android:layout_height="25dp"
+            android:layout_marginBottom="9dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="申办流水号："
+                android:textColor="@color/text1"/>
+            <TextView
+                android:id="@+id/bookCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#d81e06"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="业务信息"
+                android:textColor="@color/theme"
+                android:gravity="center"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="6dp"/>
+
+
+            <LinearLayout
+                style="@style/loan_ll"
+                android:layout_height="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="业务事项："
+                    android:textColor="@color/text1"/>
+                <TextView
+                    android:id="@+id/event"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/loan_ll"
+                android:layout_height="25dp"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="受理单位："
+                    android:textColor="@color/text1"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="深圳市房地产权登记中心"
+                    android:textColor="@color/text1"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingLeft="11dp"
+            android:paddingRight="11dp"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:text="房地产权证明"
+                android:textColor="@color/theme"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="6dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_002"
+                style="@style/loan_ll"
+                android:layout_height="25dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="文号："
+                    android:textColor="@color/text1"/>
+                <TextView
+                    android:id="@+id/fzFileNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_001"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/houseName"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="6dp"
+                    android:textColor="@color/text1"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/proveType"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="6dp"
+                    android:textColor="@color/text1"
+                    android:gravity="center_vertical"/>
+
+                <TextView
+                    android:id="@+id/proveCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="6dp"
+                    android:textColor="@color/text1"
+                    android:gravity="center_vertical"/>
+            </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:text="办理登记点"
+            android:textColor="@color/theme"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="6dp"/>
+
+
+
+            <TextView
+                android:id="@+id/registrationAreaName"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:paddingLeft="6dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/text1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/loan_ll"
+        android:layout_height="41dp"
+        android:background="@color/white"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="17dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="状态："
+            android:textColor="@color/text1"/>
+        <TextView
+            android:id="@+id/state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已预约"
+            android:textColor="@color/text1"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:text="取消预约"
+        android:textColor="#fff"
+        android:background="@drawable/btn_my"/>
+
+
+</LinearLayout>

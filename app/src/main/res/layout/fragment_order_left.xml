@@ -1,0 +1,1011 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wang.qke.ui.tools.OrderLeftFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:background="@color/white">
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="申请事项"
+                android:id="@+id/textView5" />
+
+            <ImageView
+                android:id="@+id/im_1"
+                android:layout_width="22.5dp"
+                android:layout_height="22.5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2.5dp"
+                android:src="@drawable/my_right" />
+
+            <TextView
+                android:id="@+id/bussName"
+                style="@style/loan_ll.edit"
+                android:layout_width="240dp"
+                android:gravity="right|center"
+                android:text="领取不动产权证书及登记证明"
+                android:layout_alignBaseline="@+id/textView5"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_toStartOf="@+id/im_1"
+                android:textColor="@color/text1"
+                />
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/ll_002"
+            style="@style/loan_ll"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="事项小类"/>
+
+            <include layout="@layout/line"/>
+
+            <RadioGroup
+                android:id="@+id/rg1"
+                android:layout_height="38dp"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rb_bg"
+                android:orientation="horizontal"
+                android:padding="0.1dp">
+
+                <RadioButton
+                    android:id="@+id/left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:singleLine="true"
+                    android:button="@null"
+                    android:text="楼花抵押注销"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:checked="true"/>
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#ddd"/>
+                <RadioButton
+                    android:id="@+id/right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:singleLine="true"
+                    android:text="现楼抵押注销"
+                    android:background="@drawable/radio_button"
+                    android:textColor="@drawable/radio_button_text"
+                    android:gravity="center"
+                    android:textSize="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_001"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+        <include layout="@layout/line"/>
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="房地产所在地" />
+
+            <ImageView
+                android:id="@+id/im_5"
+                android:layout_width="22.5dp"
+                android:layout_height="22.5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2.5dp"
+                android:src="@drawable/my_right" />
+
+            <TextView
+                android:id="@+id/szAreaName"
+                style="@style/loan_ll.edit"
+                android:layout_width="200dp"
+                android:layout_toLeftOf="@id/im_5"
+                android:gravity="right|center"
+                android:hint="请选择"
+                android:textColor="@color/text1"
+                />
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="50dp"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/line"/>
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="房地产名称" />
+
+
+
+            <EditText
+                android:id="@+id/houseName"
+                style="@style/loan_ll.edit"
+                android:layout_width="200dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:gravity="right|center"
+                android:hint="请输入"
+                android:maxLength="15"
+                android:textColor="@color/text1"
+                />
+
+        </RelativeLayout>
+
+        <include layout="@layout/line"/>
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="权属证明类型" />
+
+            <ImageView
+                android:id="@+id/im_6"
+                android:layout_width="22.5dp"
+                android:layout_height="22.5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2.5dp"
+                android:src="@drawable/my_right"
+                />
+
+            <TextView
+                android:id="@+id/proveTypeName"
+                style="@style/loan_ll.edit"
+                android:layout_width="200dp"
+                android:layout_toLeftOf="@id/im_6"
+                android:gravity="right|center"
+                android:textColor="@color/text1"
+                android:hint="请选择" />
+
+            <Spinner
+                android:id="@+id/spinner2"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="50dp"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/line"/>
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="权属证明编号" />
+
+
+            <EditText
+                android:id="@+id/proveCode"
+                style="@style/loan_ll.edit"
+                android:layout_width="200dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                android:gravity="right|center"
+                android:hint="请输入"
+                android:digits="@string/english"
+                android:textColor="@color/text1"
+                android:inputType="number"
+                android:maxLength="30"/>
+
+        </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+        <include layout="@layout/line"/>
+
+        <RelativeLayout style="@style/loan_ll">
+
+            <TextView
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="办理登记点" />
+
+            <ImageView
+                android:id="@+id/im_2"
+                android:layout_width="22.5dp"
+                android:layout_height="22.5dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="7dp"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="2.5dp"
+                android:src="@drawable/my_right" />
+
+            <TextView
+                android:id="@+id/registrationAreaName"
+                style="@style/loan_ll.edit"
+                android:layout_width="200dp"
+                android:layout_toLeftOf="@id/im_2"
+                android:gravity="right|center"
+                android:textColor="@color/text1"
+                android:text="福田登记所" />
+
+            <Spinner
+                android:id="@+id/spinner3"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                android:spinnerMode="dropdown"
+                android:dropDownVerticalOffset="50dp"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ord_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:text="选择预约时间"
+            android:gravity="center_vertical"
+            android:textColor="@color/text1"
+            android:layout_marginLeft="17dp"/>
+
+        <com.example.wang.qke.classes.MyRadioGroup
+            android:id="@+id/rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_my"
+                    android:text="刷新"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"/>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="55dp"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_data1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/weekday1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.5dp"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_data2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/weekday2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.5dp"
+                        android:textSize="13sp"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_data3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/weekday3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.5dp"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_data4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/weekday4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.5dp"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:gravity="center">
+                    <TextView
+                        android:id="@+id/tv_data5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"/>
+                    <TextView
+                        android:id="@+id/weekday5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.5dp"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/hang1"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp">
+                    <TextView
+                        android:id="@+id/startTime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:textSize="13dp"
+                        android:gravity="bottom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:hint="丨"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:id="@+id/endTime1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="13dp"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rb1_1"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb2_1"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb3_1"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb4_1"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb5_1"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+            </LinearLayout>
+
+            <include layout="@layout/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/hang2"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp">
+                    <TextView
+                        android:id="@+id/startTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:textSize="13dp"
+                        android:gravity="bottom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:hint="丨"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:id="@+id/endTime2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="13dp"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rb1_2"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb2_2"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb3_2"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb4_2"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb5_2"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+            </LinearLayout>
+
+            <include layout="@layout/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/hang3"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp">
+                    <TextView
+                        android:id="@+id/startTime3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:textSize="13dp"
+                        android:gravity="bottom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:hint="丨"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:id="@+id/endTime3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="13dp"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rb1_3"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb2_3"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb3_3"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb4_3"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb5_3"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+            </LinearLayout>
+
+            <include layout="@layout/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/hang4"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp">
+                    <TextView
+                        android:id="@+id/startTime4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:textSize="13dp"
+                        android:gravity="bottom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:hint="丨"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:id="@+id/endTime4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="13dp"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rb1_4"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb2_4"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb3_4"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb4_4"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb5_4"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+            </LinearLayout>
+
+            <include layout="@layout/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/hang5"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp">
+                    <TextView
+                        android:id="@+id/startTime5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:textSize="13dp"
+                        android:gravity="bottom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:hint="丨"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:id="@+id/endTime5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="13dp"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rb1_5"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb2_5"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb3_5"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb4_5"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb5_5"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+            </LinearLayout>
+
+            <include layout="@layout/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/hang6"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp">
+                    <TextView
+                        android:id="@+id/startTime6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:textSize="13dp"
+                        android:gravity="bottom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:hint="丨"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:id="@+id/endTime6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="13dp"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rb1_6"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb2_6"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb3_6"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb4_6"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb5_6"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+            </LinearLayout>
+
+
+            <include layout="@layout/line"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp" />
+
+
+            <LinearLayout
+                android:id="@+id/hang7"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="0dp">
+                    <TextView
+                        android:id="@+id/startTime7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:textSize="13dp"
+                        android:gravity="bottom"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:hint="丨"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:id="@+id/endTime7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp"
+                        android:layout_marginBottom="3dp"
+                        android:textSize="13dp"
+                        android:gravity="top"/>
+                </LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/rb1_7"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb2_7"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb3_7"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb4_7"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+                <RadioButton
+                    android:id="@+id/rb5_7"
+                    style="@style/order_radio_button"
+                    android:text="15/50"/>
+            </LinearLayout>
+
+        </com.example.wang.qke.classes.MyRadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:background="@color/white"
+        android:layout_marginTop="8dp">
+
+        <RelativeLayout
+            android:id="@+id/ll_003"
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="文号"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true" />
+
+            <EditText
+                android:id="@+id/fzFileNo"
+                android:layout_width="200dp"
+                style="@style/loan_ll.edit"
+                android:layout_alignParentRight="true"
+                android:hint="请输入"
+                android:gravity="right|center"
+                android:maxLength="30"
+                android:textColor="@color/text1"/>
+        </RelativeLayout>
+        <include layout="@layout/line"/>
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="申请人真实姓名"/>
+
+            <EditText
+                android:id="@+id/personName"
+                android:layout_width="200dp"
+                style="@style/loan_ll.edit"
+                android:layout_alignParentRight="true"
+                android:hint="请输入"
+                android:textColor="@color/text1"
+                android:gravity="right|center"
+                android:maxLength="6"/>
+
+        </RelativeLayout>
+        <include layout="@layout/line"/>
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="手机号"/>
+
+            <EditText
+                android:id="@+id/phoneNumber"
+                android:layout_width="200dp"
+                style="@style/loan_ll.edit"
+                android:layout_alignParentRight="true"
+                android:hint="请输入"
+                android:textColor="@color/text1"
+                android:gravity="right|center"
+                android:inputType="phone"/>
+
+        </RelativeLayout>
+        <include layout="@layout/line"/>
+        <RelativeLayout
+            style="@style/loan_ll">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:text="二代身份证号"/>
+
+            <EditText
+                android:id="@+id/certificateNo"
+                android:layout_width="200dp"
+                style="@style/loan_ll.edit"
+                android:hint="请输入"
+                android:gravity="right|center"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:digits="@string/shenfenzheng"
+                android:textColor="@color/text1"/>
+
+        </RelativeLayout>
+        <include layout="@layout/line"/>
+        <RelativeLayout
+            style="@style/loan_ll">
+            <ImageView
+                android:id="@+id/certCode_img"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:textColor="@color/text1"
+                android:layout_centerVertical="true"/>
+
+            <EditText
+                android:id="@+id/verificationcodereg"
+                android:layout_width="200dp"
+                style="@style/loan_ll.edit"
+                android:layout_alignParentRight="true"
+                android:hint="请输入验证码"
+                android:gravity="right|center"
+                android:textColor="@color/text1"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="280dp"
+        android:layout_height="41dp"
+        android:background="@drawable/btn_my"
+        android:text="立即预约"
+        android:textColor="@color/white"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"/>
+
+</LinearLayout>
+</ScrollView>

@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.wang.qke.ui.myself.PersonalFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/reUserName"
+        style="@style/my_bar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/home_title_text"
+            android:layout_marginLeft="12dp"
+            android:text="修改用户名"/>
+        <ImageView
+            android:layout_width="22.5dp"
+            android:layout_height="22.5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/my_right"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="2dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/phone"
+        style="@style/my_bar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/home_title_text"
+            android:layout_marginLeft="12dp"
+            android:text="绑定电话"/>
+        <TextView
+            android:id="@+id/mobNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/my_right"
+            android:layout_marginRight="9dp"
+            android:layout_alignParentEnd="true"
+            android:text=""
+            android:layout_marginTop="2dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rePassword"
+        style="@style/my_bar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/home_title_text"
+            android:layout_marginLeft="12dp"
+            android:text="修改密码"
+            android:id="@+id/textView" />
+        <ImageView
+            android:layout_width="22.5dp"
+            android:layout_height="22.5dp"
+            android:src="@drawable/my_right"
+            android:layout_marginRight="9dp"
+            android:layout_alignTop="@+id/textView"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/inviteFriend"
+        style="@style/my_bar"
+        android:layout_marginTop="9dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/home_title_text"
+            android:layout_marginLeft="12dp"
+            android:text="邀请好友"/>
+        <ImageView
+            android:layout_width="22.5dp"
+            android:layout_height="22.5dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/my_right"
+            android:layout_marginRight="9dp"
+            android:layout_marginTop="2dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/invCodeBar"
+        style="@style/my_bar">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/home_title_text"
+            android:layout_marginLeft="12dp"
+            android:text="我的邀请码"/>
+        <TextView
+            android:id="@+id/inviteCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/my_right"
+            android:layout_marginRight="9dp"
+            android:layout_alignParentEnd="true"
+            android:text=""
+            android:layout_marginTop="2dp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/outLog"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:background="@drawable/yuanjiao_2"
+        android:text="退出登录"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:textColor="@color/text1"/>
+
+</LinearLayout>

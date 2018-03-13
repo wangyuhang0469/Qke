@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="102dp"
+        android:background="#fff"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp">
+
+        <ImageView
+            android:id="@+id/picName"
+            android:layout_width="122.7dp"
+            android:layout_height="76.7dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+
+            />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:textSize="15sp"
+            android:text="标题"
+            android:layout_marginLeft="12dp"
+            android:lineSpacingMultiplier="1.2"
+            android:layout_toStartOf="@+id/picName"
+            android:layout_marginRight="15dp"/>
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="#dcdcdc"
+            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_alignParentBottom="true"/>
+
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#aaa"/>
+        <View
+            android:layout_width="0.3dp"
+            android:layout_height="match_parent"
+            android:background="#aaa"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.wang.qke.ui.loan.Loan3Fragment"
+    android:background="@color/white"
+    android:paddingLeft="11dp"
+    android:paddingRight="11dp"
+    android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/base_bg"/>
+
+
+
+    <LinearLayout
+        style="@style/loan_ll">
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/loan_icon21" />
+        <EditText
+            android:id="@+id/age"
+            style="@style/loan_ll.edit"
+            android:inputType="number"
+            android:hint="年龄"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/base_bg"/>
+
+    <LinearLayout
+        style="@style/loan_ll">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/loan_icon22" />
+
+        <EditText
+            android:id="@+id/loanFrequency"
+            style="@style/loan_ll.edit"
+            android:inputType="number"
+            android:hint="半年内贷款次数"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/base_bg"/>
+
+    <LinearLayout
+        style="@style/loan_ll">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/loan_icon23" />
+
+        <EditText
+            android:id="@+id/overdueLoan"
+            style="@style/loan_ll.edit"
+            android:inputType="number"
+            android:hint="两年内逾期次数"/>
+    </LinearLayout>
+
+
+</LinearLayout>
