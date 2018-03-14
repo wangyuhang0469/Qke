@@ -58,6 +58,7 @@
         <activity android:name=".ui.myself.FindPasswordActivity" />
         <activity android:name=".ui.articles.InformationActivity" />
         <activity android:name=".ui.articles.BiblesActivity" />
+        <activity android:name=".ui.articles.BiblesActivity" />
         <activity android:name=".ui.articles.ArticleActivity" />
         <activity android:name=".ui.loan.LoanPlanActivity" />
         <activity android:name=".ui.loan.LoanListActivity" />

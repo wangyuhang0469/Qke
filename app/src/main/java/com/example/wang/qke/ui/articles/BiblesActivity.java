@@ -1,22 +1,29 @@
 package com.example.wang.qke.ui.articles;
 
-import android.content.Context;
-import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.BaseAdapter;
-import android.widget.ListView;
+import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.example.wang.qke.R;
-import com.example.wang.qke.adapter.BibleAdapter;
 import com.example.wang.qke.base.BaseActivity;
 import com.example.wang.qke.classes.Article;
 import com.example.wang.qke.classes.ArticleTool;
 import com.example.wang.qke.classes.HttpUtil;
+import com.example.wang.qke.classes.PullableRecyclerView;
+import com.jwenfeng.library.pulltorefresh.BaseRefreshListener;
+import com.jwenfeng.library.pulltorefresh.PullToRefreshLayout;
 
 import org.apache.http.client.ClientProtocolException;
 import org.json.JSONException;
@@ -32,23 +39,20 @@ public class BiblesActivity extends BaseActivity {
 
     @Bind(R.id.title)
     TextView title;
-    @Bind(R.id.listView1)
-    ListView listView;
     @Bind(R.id.loading)
     TextView loading;
+    @Bind(R.id.recycleView)
+    PullableRecyclerView recycleView;
+    @Bind(R.id.PullToRefreshLayout)
+    PullToRefreshLayout pullToRefreshLayout;
     private String path = "http://123.207.61.165/outside/getarticles?from=1&type=宝典&page=";
 
+    private int cpageNum = 0;
 
-    private boolean havaNext = true;
-    //用来判断是否加载完成
-    private boolean loadfinish = true;
-    private View v;
 
     private List<Article> list;
 
-    private BaseAdapter baseAdapter;
-
-    private int cpageNum = 0;
+    private MyAdapter myAdapter;
 
 
     @Override
@@ -59,98 +63,33 @@ public class BiblesActivity extends BaseActivity {
 
         title.setText("宝典");
 
+        LinearLayoutManager layoutmanager = new LinearLayoutManager(this);
+        recycleView.setLayoutManager(layoutmanager);
 
-        v = this.getLayoutInflater().inflate(R.layout.listview_foot, null);
+        new infoTask().execute(path + cpageNum);
 
+        initPullToRresh();
 
-        new infoTask(this, listView, 0).execute(path + "0"); //这里执行了异步任务的方法，并传入路径。
+    }
 
+    private void initPullToRresh() {
+        pullToRefreshLayout.setCanRefresh(false);
 
-        listView.setOnScrollListener(new AbsListView.OnScrollListener() {
-            public void onScrollStateChanged(AbsListView view, int scrollState) {
-                // TODO Auto-generated method stub
+        pullToRefreshLayout.setRefreshListener(new BaseRefreshListener() {
+            @Override
+            public void refresh() {
             }
 
             @Override
-            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, final int totalItemCount) {
-
-
-                //判断用户是否滑动到最后一项，因为索引值从零开始所以要加上1
-                if ((firstVisibleItem + visibleItemCount) == totalItemCount) {
-                    View lastVisibleItemView = listView.getChildAt(listView.getChildCount() - 1);
-                    if (lastVisibleItemView != null && lastVisibleItemView.getBottom() == listView.getHeight()) {
-
-                        if (havaNext && loadfinish) {
-
-                            loadfinish = false;
-
-
-                            if (totalItemCount > 0) {
-                                //判断当前页是否超过最大页，以及上一页的数据是否加载完成
-
-
-//                                //添加页脚视图
-//                                listView.addFooterView(v);
-
-
-                                cpageNum++;
-
-
-                                new infoTask(BiblesActivity.this, listView, 1).execute(path + cpageNum);
-
-
-                            }
-                        }
-
-                    }
-
-                }
+            public void loadMore() {
+                new infoTask().execute(path + cpageNum);
             }
         });
-
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {  //这里我使用了一个点击ListView的监听，这儿一般是点击后就会跳转并显示该条目的详情，在这片文章中我还完善。
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-                //得到listview最后一项的id
-                int lastItemId = listView.getLastVisiblePosition();
-
-                if (position != lastItemId) {
-
-                    Intent intent = new Intent(BiblesActivity.this, ArticleActivity.class);
-
-                    //用Bundle携带数据
-                    Bundle bundle = new Bundle();
-                    bundle.putString("id", list.get(position).getId());
-                    bundle.putString("title", list.get(position).getTitle());
-                    intent.putExtras(bundle);
-                    startActivity(intent);
-
-                }
-            }
-        });
-
-
     }
 
 
     public class infoTask extends AsyncTask<String, Void, List<Article>> {
 
-
-        private Context context;
-        private ListView listView;
-        private int n;
-
-
-        public infoTask(Context context, ListView listView, int n) {
-            super();
-            this.context = context;
-            this.listView = listView;
-            this.n = n;
-        }
 
         @Override
         protected List<Article> doInBackground(String... params) {
@@ -162,7 +101,6 @@ public class BiblesActivity extends BaseActivity {
                     byte[] data = HttpUtil.getJsonString(url);
                     String jsonString = new String(data, "utf-8");
                     list = ArticleTool.parseArticle(jsonString);
-
 
                 } catch (ClientProtocolException e) {
                     // TODO Auto-generated catch block
@@ -183,48 +121,94 @@ public class BiblesActivity extends BaseActivity {
             // TODO Auto-generated method stub
             super.onPostExecute(result);
 
-            switch (n) {
-                case 0:
-                    list = result;
-                    baseAdapter = new BibleAdapter(BiblesActivity.this, list);
-                    //添加listview的脚跟视图，这个方法必须在listview.setAdapter()方法之前，否则无法显示视图
-                    if (list != null) {
-                        listView.addFooterView(v);
-                    }
-                    //添加数据
-                    listView.setAdapter(baseAdapter);
-                    loading.setText("");
-                    break;
+            cpageNum++;
+            if (cpageNum == 1) {
+                list = result;
+                myAdapter = new MyAdapter(list);
+                recycleView.setAdapter(myAdapter);
+                loading.setText("");
+            } else {
 
-
-                case 1:
-
-                    if (result == null) {
-                        toast("加载失败");
-                    } else if (result.size() != 0) {
-
-                        list.addAll(result);
-
-                        baseAdapter.notifyDataSetChanged();
-                        if (listView.getFooterViewsCount() != 0) {
-//                                        listView.removeFooterView(v);
-                        }
-
-                        loadfinish = true;
-                    } else {
-                        havaNext = false;
-
-                        View v2 = getLayoutInflater().inflate(R.layout.listview_foot_end, null);
-                        listView.removeFooterView(v);
-
-                        listView.addFooterView(v2);
-                    }
-
-
-                    break;
+                if (result == null) {
+                    toast("加载失败");
+                } else if (result.size() != 0) {
+                    list.addAll(result);
+                    myAdapter.notifyDataSetChanged();
+                } else {
+                    toast("已是最后一页");
+                    pullToRefreshLayout.setCanLoadMore(false);
+                }
             }
 
+            pullToRefreshLayout.finishLoadMore();
 
+        }
+    }
+
+
+    public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
+
+
+        private List<Article> list;
+
+        public MyAdapter(List<Article> list) {
+            this.list = list;
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+
+            TextView item_title;
+            ImageView item_picName;
+
+            public ViewHolder(View itemView) {
+                super(itemView);
+                item_picName = (ImageView) itemView.findViewById(R.id.picName);
+                item_title = (TextView) itemView.findViewById(R.id.title);
+            }
+        }
+
+
+        @Override
+        public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.bibles_item, parent, false);
+            return new ViewHolder(v);
+        }
+
+        @Override
+        public void onBindViewHolder(final ViewHolder holder, final int position) {
+
+            holder.item_title.setText(list.get(position).getTitle());
+
+
+            Glide.with(BiblesActivity.this)
+                    .load(list.get(position).getPicUrl())
+                    .asBitmap()
+                    .into(new SimpleTarget<Bitmap>() {
+                        @Override
+                        public void onResourceReady(Bitmap resource, GlideAnimation<? super Bitmap> glideAnimation) {
+                            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+                                holder.item_picName.setBackground(new BitmapDrawable(resource));   //设置背景
+                            }
+                        }
+                    });
+
+            holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Bundle bundle = new Bundle();
+                    bundle.putString("id", list.get(position).getId());
+                    bundle.putString("title", list.get(position).getTitle());
+                    startActivity(ArticleActivity.class, bundle, false);
+                }
+            });
+
+
+        }
+
+
+        @Override
+        public int getItemCount() {
+            return list == null ? 0 : list.size();
         }
 
 
@@ -234,4 +218,6 @@ public class BiblesActivity extends BaseActivity {
     public void onViewClicked() {
         finish();
     }
+
+
 }

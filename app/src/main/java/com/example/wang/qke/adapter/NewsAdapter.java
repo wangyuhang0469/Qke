@@ -99,8 +99,10 @@ public class NewsAdapter extends BaseAdapter {
 		}
         final ViewHolder holder2 = (ViewHolder) convertView.getTag();
 		
-		final String picName = list.get(position).getPicUrl();
+		final String picName = list.get(position).getPic();
 		String imageUrl = "http://123.207.61.165/uploads/article/"+picName;
+
+		Log.e("====================================",imageUrl);
 
 		String title = list.get(position).getTitle();
 

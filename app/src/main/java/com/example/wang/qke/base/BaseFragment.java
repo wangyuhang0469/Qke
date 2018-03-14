@@ -67,9 +67,7 @@ public class BaseFragment extends Fragment {
      * @param msg
      */
     public void log(String msg){
-        if(Config.DEBUG){
-            Log.i("log i",msg);
-        }
+            Log.i("==============================================",msg);
     }
 
 }
