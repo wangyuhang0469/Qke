@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:background="@drawable/order_select"
+        android:textColor="@drawable/radio_button_text"
+        android:gravity="center"
+        android:layout_margin="2dp"/>
+
+</LinearLayout>

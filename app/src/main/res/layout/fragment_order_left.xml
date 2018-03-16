@@ -29,16 +29,6 @@
                 android:text="申请事项"
                 android:id="@+id/textView5" />
 
-            <ImageView
-                android:id="@+id/im_1"
-                android:layout_width="22.5dp"
-                android:layout_height="22.5dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="7dp"
-                android:layout_marginLeft="1dp"
-                android:layout_marginTop="2.5dp"
-                android:src="@drawable/my_right" />
 
             <TextView
                 android:id="@+id/bussName"
@@ -46,11 +36,9 @@
                 android:layout_width="240dp"
                 android:gravity="right|center"
                 android:text="领取不动产权证书及登记证明"
-                android:layout_alignBaseline="@+id/textView5"
-                android:layout_alignBottom="@+id/textView5"
-                android:layout_toStartOf="@+id/im_1"
+                android:layout_alignParentRight="true"
                 android:textColor="@color/text1"
-                />
+                android:layout_marginRight="8dp" />
 
         </RelativeLayout>
 
@@ -330,553 +318,56 @@
             android:textColor="@color/text1"
             android:layout_marginLeft="17dp"/>
 
-        <com.example.wang.qke.classes.MyRadioGroup
-            android:id="@+id/rg"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:paddingLeft="13dp"
-            android:paddingRight="13dp"
-            android:orientation="vertical">
-            <LinearLayout
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:orientation="horizontal">
+            android:layout_height="50dp"
+            android:background="@color/white">
 
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
                 <Button
-                    android:id="@+id/button2"
-                    android:layout_width="0dp"
+                    android:id="@+id/refresh"
+                    android:layout_width="match_parent"
                     android:layout_height="35dp"
                     android:layout_gravity="center"
-                    android:layout_weight="1"
                     android:background="@drawable/btn_my"
                     android:text="刷新"
                     android:textColor="@color/white"
-                    android:textSize="15dp"/>
+                    android:textSize="15dp"
+                    android:layout_margin="8dp"/>
 
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="55dp"
-                    android:layout_width="0dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <TextView
-                        android:id="@+id/tv_data1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="13sp"/>
-                    <TextView
-                        android:id="@+id/weekday1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2.5dp"
-                        android:textSize="13sp"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:layout_width="0dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <TextView
-                        android:id="@+id/tv_data2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="13sp"/>
-                    <TextView
-                        android:id="@+id/weekday2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2.5dp"
-                        android:textSize="13sp"/>
-
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/tv_data3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="13sp" />
-
-                    <TextView
-                        android:id="@+id/weekday3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2.5dp"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:layout_width="0dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <TextView
-                        android:id="@+id/tv_data4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="13sp"/>
-                    <TextView
-                        android:id="@+id/weekday4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2.5dp"
-                        android:textSize="13sp"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="match_parent"
-                    android:layout_width="0dp"
-                    android:orientation="vertical"
-                    android:gravity="center">
-                    <TextView
-                        android:id="@+id/tv_data5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="13sp"/>
-                    <TextView
-                        android:id="@+id/weekday5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="2.5dp"
-                        android:textSize="13sp"/>
-                </LinearLayout>
-            </LinearLayout>
-
-            <include layout="@layout/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp" />
-
-
-            <LinearLayout
-                android:id="@+id/hang1"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp">
-                    <TextView
-                        android:id="@+id/startTime1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:textSize="13dp"
-                        android:gravity="bottom"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:hint="丨"
-                        android:textSize="10sp"/>
-                    <TextView
-                        android:id="@+id/endTime1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:layout_marginBottom="3dp"
-                        android:textSize="13dp"
-                        android:gravity="top"/>
-                </LinearLayout>
-
-                <RadioButton
-                    android:id="@+id/rb1_1"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb2_1"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb3_1"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb4_1"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb5_1"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-            </LinearLayout>
-
-            <include layout="@layout/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp" />
-
-
-            <LinearLayout
-                android:id="@+id/hang2"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp">
-                    <TextView
-                        android:id="@+id/startTime2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:textSize="13dp"
-                        android:gravity="bottom"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:hint="丨"
-                        android:textSize="10sp"/>
-                    <TextView
-                        android:id="@+id/endTime2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:layout_marginBottom="3dp"
-                        android:textSize="13dp"
-                        android:gravity="top"/>
-                </LinearLayout>
-
-                <RadioButton
-                    android:id="@+id/rb1_2"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb2_2"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb3_2"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb4_2"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb5_2"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-            </LinearLayout>
-
-            <include layout="@layout/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp" />
-
-
-            <LinearLayout
-                android:id="@+id/hang3"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp">
-                    <TextView
-                        android:id="@+id/startTime3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:textSize="13dp"
-                        android:gravity="bottom"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:hint="丨"
-                        android:textSize="10sp"/>
-                    <TextView
-                        android:id="@+id/endTime3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:layout_marginBottom="3dp"
-                        android:textSize="13dp"
-                        android:gravity="top"/>
-                </LinearLayout>
-
-                <RadioButton
-                    android:id="@+id/rb1_3"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb2_3"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb3_3"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb4_3"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb5_3"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-            </LinearLayout>
-
-            <include layout="@layout/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp" />
-
-
-            <LinearLayout
-                android:id="@+id/hang4"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp">
-                    <TextView
-                        android:id="@+id/startTime4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:textSize="13dp"
-                        android:gravity="bottom"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:hint="丨"
-                        android:textSize="10sp"/>
-                    <TextView
-                        android:id="@+id/endTime4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:layout_marginBottom="3dp"
-                        android:textSize="13dp"
-                        android:gravity="top"/>
-                </LinearLayout>
-
-                <RadioButton
-                    android:id="@+id/rb1_4"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb2_4"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb3_4"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb4_4"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb5_4"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-            </LinearLayout>
-
-            <include layout="@layout/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp" />
-
-
-            <LinearLayout
-                android:id="@+id/hang5"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp">
-                    <TextView
-                        android:id="@+id/startTime5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:textSize="13dp"
-                        android:gravity="bottom"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:hint="丨"
-                        android:textSize="10sp"/>
-                    <TextView
-                        android:id="@+id/endTime5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:layout_marginBottom="3dp"
-                        android:textSize="13dp"
-                        android:gravity="top"/>
-                </LinearLayout>
-
-                <RadioButton
-                    android:id="@+id/rb1_5"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb2_5"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb3_5"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb4_5"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb5_5"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-            </LinearLayout>
-
-            <include layout="@layout/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp" />
-
-
-            <LinearLayout
-                android:id="@+id/hang6"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp">
-                    <TextView
-                        android:id="@+id/startTime6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:textSize="13dp"
-                        android:gravity="bottom"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:hint="丨"
-                        android:textSize="10sp"/>
-                    <TextView
-                        android:id="@+id/endTime6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:layout_marginBottom="3dp"
-                        android:textSize="13dp"
-                        android:gravity="top"/>
-                </LinearLayout>
-
-                <RadioButton
-                    android:id="@+id/rb1_6"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb2_6"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb3_6"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb4_6"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb5_6"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
             </LinearLayout>
 
 
-            <include layout="@layout/line"
-                android:layout_width="match_parent"
-                android:layout_height="0.8dp" />
 
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/dateRecyclerView"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
 
-            <LinearLayout
-                android:id="@+id/hang7"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:gravity="center">
-                <LinearLayout
-                    android:layout_weight="1"
-                    android:layout_height="55dp"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    android:layout_width="0dp">
-                    <TextView
-                        android:id="@+id/startTime7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:textSize="13dp"
-                        android:gravity="bottom"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="10dp"
-                        android:hint="丨"
-                        android:textSize="10sp"/>
-                    <TextView
-                        android:id="@+id/endTime7"
-                        android:layout_width="wrap_content"
-                        android:layout_height="15dp"
-                        android:layout_marginBottom="3dp"
-                        android:textSize="13dp"
-                        android:gravity="top"/>
-                </LinearLayout>
+        </LinearLayout>
 
-                <RadioButton
-                    android:id="@+id/rb1_7"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb2_7"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb3_7"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb4_7"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-                <RadioButton
-                    android:id="@+id/rb5_7"
-                    style="@style/order_radio_button"
-                    android:text="15/50"/>
-            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
-        </com.example.wang.qke.classes.MyRadioGroup>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/timeRecyclerView"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
