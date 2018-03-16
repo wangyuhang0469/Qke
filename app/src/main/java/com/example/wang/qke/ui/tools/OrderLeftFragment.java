@@ -675,7 +675,6 @@ public class OrderLeftFragment extends BaseFragment  {
 
         bookingDateLabel = dateList.get(lie).getUp_workDayLabel();
         bookingDateStr = dateList.get(lie).getUp_bookingDateStr();
-        toast( bookingDateLabel + "   " + bookingDateStr + "   " + workTimeSoltName + "   " + workTimeSoltOid);
     }
 
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
