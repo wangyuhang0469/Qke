@@ -158,6 +158,8 @@ public class OrderLeftFragment extends BaseFragment  {
         loadTable();
         mQueue.add(verifCodeRequest);
 
+
+
         return view;
     }
 
