@@ -147,6 +147,7 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+
     // 进行用户token验证实现免登录
     private void verifyUser() {
 
