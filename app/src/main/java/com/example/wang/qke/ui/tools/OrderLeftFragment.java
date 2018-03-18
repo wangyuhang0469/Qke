@@ -159,7 +159,6 @@ public class OrderLeftFragment extends BaseFragment  {
         mQueue.add(verifCodeRequest);
 
 
-
         return view;
     }
 
