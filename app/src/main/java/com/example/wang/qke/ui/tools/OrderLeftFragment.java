@@ -411,6 +411,7 @@ public class OrderLeftFragment extends BaseFragment  {
     public void onViewClicked() {
 
 
+
         if (registrationAreaName.getText().length() != 0 && personName.getText().length() != 0 &&
                 certificateNo.getText().length() != 0 && phoneNumber.getText().length() != 0 &&
                 verificationcodereg.getText().length() != 0 && registrationAreaName.getText().length() != 0) {
