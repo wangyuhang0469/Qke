@@ -110,6 +110,7 @@ public class AdsHistoryAdapter extends BaseAdapter {
 
             Log.e("not read---"," not  read ------------------------------------------");
 
+
             new DownImageTask(new DownImageTask.DownLoadBack() {
                 @Override
                 public void response(Bitmap bitmap) {
