@@ -152,6 +152,7 @@ public class OrderLeftFragment extends BaseFragment  {
 
         initData();
 
+
         initView();
 
         initMethod();
