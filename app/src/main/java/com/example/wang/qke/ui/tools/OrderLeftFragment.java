@@ -153,6 +153,7 @@ public class OrderLeftFragment extends BaseFragment  {
 
         initView();
 
+
         initMethod();
 
         loadTable();
