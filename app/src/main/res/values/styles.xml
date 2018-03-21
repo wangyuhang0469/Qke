@@ -6,6 +6,8 @@
         <item name="colorPrimary">@color/theme</item>
         <item name="colorPrimaryDark">@color/theme</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
+
     </style>
 
     <style name="home_title_text">
@@ -123,6 +125,9 @@
         <item name="android:textSize">15dp</item>
         <item name="android:textColor">@color/text1</item>
     </style>
+
+
+
 
     <style name="order_radio_button">
         <item name="android:layout_width">0dp</item>

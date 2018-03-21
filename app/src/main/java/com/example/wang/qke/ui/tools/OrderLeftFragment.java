@@ -141,6 +141,7 @@ public class OrderLeftFragment extends BaseFragment  {
 
 
 
+
     //=======================================================================主线程===============================================================
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -150,6 +151,7 @@ public class OrderLeftFragment extends BaseFragment  {
 
 
         initData();
+
 
         initView();
 
@@ -409,6 +411,7 @@ public class OrderLeftFragment extends BaseFragment  {
 
     @OnClick(R.id.btn)
     public void onViewClicked() {
+
 
 
         if (registrationAreaName.getText().length() != 0 && personName.getText().length() != 0 &&
