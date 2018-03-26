@@ -149,11 +149,10 @@ public class OrderLeftFragment extends BaseFragment  {
         final View view = inflater.inflate(R.layout.fragment_order_left, container, false);
         ButterKnife.bind(this, view);
 
-
         initData();
 
-
         initView();
+
 
         initMethod();
 
