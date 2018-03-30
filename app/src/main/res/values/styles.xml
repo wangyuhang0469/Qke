@@ -6,8 +6,7 @@
         <item name="colorPrimary">@color/theme</item>
         <item name="colorPrimaryDark">@color/theme</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:windowIsTranslucent">true</item>
-
+        <item name="android:windowIsTranslucent">true</item>   //添加此句
     </style>
 
     <style name="home_title_text">

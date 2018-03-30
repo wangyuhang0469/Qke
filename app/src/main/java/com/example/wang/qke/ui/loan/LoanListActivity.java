@@ -192,24 +192,6 @@ public class LoanListActivity extends BaseActivity {
                             String mortgage = object.getString("mortgage");
                             String pic = object.getString("pic");
 
-
-//                            String del = object.getString("del");
-//                            String rateFloat = object.getString("rateFloat");
-//                            String propertyFloat = object.getString("propertyFloat");
-//                            String minAge = object.getString("minAge");
-//                            String maxAge = object.getString("maxAge");
-//                            String overdueAmout = object.getString("overdueAmout");
-//                            String startTime = object.getString("startTime");
-//                            String endTime = object.getString("endTime");
-//                            String speed = object.getString("speed");
-//                            String description = object.getString("description");
-//                            String create_author = object.getString("create_author");
-//                            String update_author = object.getString("update_author");
-//                            String sortid = object.getString("sortid");
-//                            String created_at = object.getString("created_at");
-//                            String updated_at = object.getString("updated_at");
-
-
                             loanPlan.setId(id);
                             loanPlan.setCompany(company);
                             loanPlan.setProduct(product);
@@ -220,22 +202,6 @@ public class LoanListActivity extends BaseActivity {
                             loanPlan.setType(type);
                             loanPlan.setMortgage(mortgage);
                             loanPlan.setPic(pic);
-
-//                            loanPlan.setDel(del);
-//                            loanPlan.setRateFloat(rateFloat);
-//                            loanPlan.setPropertyFloat(propertyFloat);
-//                            loanPlan.setMinAge(minAge);
-//                            loanPlan.setMaxAge(maxAge);
-//                            loanPlan.setOverdueAmout(overdueAmout);
-//                            loanPlan.setStartTime(startTime);
-//                            loanPlan.setEndTime(endTime);
-//                            loanPlan.setSpeed(speed);
-//                            loanPlan.setDescription(description);
-//                            loanPlan.setCreate_author(create_author);
-//                            loanPlan.setUpdate_author(update_author);
-//                            loanPlan.setSortid(sortid);
-//                            loanPlan.setCreated_at(created_at);
-//                            loanPlan.setUpdated_at(updated_at);
 
                             list.add(loanPlan);
                         }
@@ -559,42 +525,23 @@ public class LoanListActivity extends BaseActivity {
         public View getView(int position, View convertView, ViewGroup parent) {
             LayoutInflater mInflater = LayoutInflater.from(context);
 
-
-
                 if (convertView == null) {
-//                    if (position != 0 && position != 1) {
-//                        convertView = mInflater.inflate(R.layout.loan_list_item2, null);
-//                    } else if (position == 0) {
-//                        convertView = mInflater.inflate(R.layout.loan_list_item1, null);
-//                    } else {
-//                        convertView = mInflater.inflate(R.layout.loan_list_item3, null);
-//                    }
-
-//                    if (position == 0) {
-//                        convertView = mInflater.inflate(R.layout.loan_list_item1, null);
-
                         convertView = mInflater.inflate(R.layout.loan_list_item4, null);
-
                     ViewHolder holder = new ViewHolder();
 
-//                    holder.product = (TextView) convertView.findViewById(R.id.product);
                     holder.company = (TextView) convertView.findViewById(R.id.company);
                     holder.loanRate = (TextView) convertView.findViewById(R.id.loanRate);
                     holder.canLoan = (TextView) convertView.findViewById(R.id.canLoan);
-//                    holder.repayment = (TextView) convertView.findViewById(R.id.repayment);
                     holder.duration = (TextView) convertView.findViewById(R.id.duration);
                     holder.type = (TextView) convertView.findViewById(R.id.type);
                     holder.picName = (ImageView) convertView.findViewById(R.id.logo);
-//                    holder.logo = (ImageView) convertView.findViewById(R.id.logo);
 
                     convertView.setTag(holder);
 
             }
 
-
             final ViewHolder holder2 = (ViewHolder) convertView.getTag();
 
-//            String product = list.get(position).getProduct();
             String company = list.get(position).getCompany();
             String loanRate = list.get(position).getLoanRate();
             String canLoan = list.get(position).getCanLoan();

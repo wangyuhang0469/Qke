@@ -193,7 +193,6 @@ public class InformationActivity extends BaseActivity {
 
             holder.item_title.setText(list.get(position).getTitle());
 
-
             Glide.with(InformationActivity.this)
                     .load(list.get(position).getPicUrl())
                     .asBitmap()
@@ -218,9 +217,6 @@ public class InformationActivity extends BaseActivity {
 
 
         }
-
-
-
 
         @Override
         public int getItemCount() {

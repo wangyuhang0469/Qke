@@ -28,10 +28,10 @@ import butterknife.ButterKnife;
 public class MyselfFragment extends Fragment implements View.OnClickListener {
 
 
-    @Bind(R.id.back)
-    ImageView back;
-    @Bind(R.id.title)
-    TextView title;
+//    @Bind(R.id.back)
+//    ImageView back;
+//    @Bind(R.id.title)
+//    TextView title;
     @Bind(R.id.personal)
     TextView personal;
     @Bind(R.id.invite)
@@ -68,8 +68,8 @@ public class MyselfFragment extends Fragment implements View.OnClickListener {
         final View view = inflater.inflate(R.layout.fragment_myself, container, false);
         ButterKnife.bind(this, view);
 //        初始化标题栏
-        title.setText("个人中心");
-        back.setVisibility(view.GONE);
+//        title.setText("个人中心");
+//        back.setVisibility(view.GONE);
 
 //        personalFragment = new PersonalFragment();
 //        inviteFragment = new InviteFragment();
@@ -95,10 +95,10 @@ public class MyselfFragment extends Fragment implements View.OnClickListener {
                     case 1:
                         login.setText(User.getInstance().getLogin());
                         if (User.getInstance().getRole().equals("0")) {
-                            role0.setVisibility(View.VISIBLE);
+//                            role0.setVisibility(View.VISIBLE);
                             avatar.setImageResource(R.drawable.putongyonghu);
                         } else {
-                            role1.setVisibility(View.VISIBLE);
+//                            role1.setVisibility(View.VISIBLE);
                             avatar.setImageResource(R.drawable.tongye);
                         }
                         break;

@@ -76,14 +76,7 @@ public class HouseDetailsActivity extends BaseActivity {
         registerPrice = bundle.getString("registerPrice");
         owner = bundle.getString("owner");
 
-
         transactionPrice = bundle.getString("transactionPrice");
-
-
-
-
-
-
 
 
         tvName.setText(name);

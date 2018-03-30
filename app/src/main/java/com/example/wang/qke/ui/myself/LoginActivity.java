@@ -58,13 +58,9 @@ public class LoginActivity extends BaseActivity {
 
                 JSONObject object = null;
                 JSONObject result = null;
-
                 try {
-
                     object = new JSONObject(response);
-
                     if (object.getString("resultCode").equals("00")) {
-
                         result = object.getJSONObject("result");
                         user.setUid(result.getString("uid"));
                         user.setLogin(result.getString("login"));
@@ -73,27 +69,17 @@ public class LoginActivity extends BaseActivity {
                         user.setInviteCode(result.getString("inviteCode"));
                         user.setToken(result.getString("token"));
                         user.setStatus(true);
-
-
-                        //步骤2-1：创建一个SharedPreferences.Editor接口对象，lock表示要写入的XML文件名，MODE_WORLD_WRITEABLE写操作
                         SharedPreferences.Editor editor = getSharedPreferences("verifyUser", MODE_PRIVATE).edit();
-                        //步骤2-2：将获取过来的值放入文件
                         editor.putString("uid", user.getUid());
                         editor.putString("token", user.getToken());
-                        //步骤3：提交
                         editor.commit();
-
-
                         finish();
                     }
                     toast(object.getString("msg"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-
                 Log.d("json-------------", response);
-
             }
         }, new Response.ErrorListener() {
             @Override

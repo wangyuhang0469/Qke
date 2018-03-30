@@ -157,13 +157,16 @@ public class BiblesActivity extends BaseActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
 
-            TextView item_title;
+            TextView item_title,summary,author,pageView;
             ImageView item_picName;
 
             public ViewHolder(View itemView) {
                 super(itemView);
                 item_picName = (ImageView) itemView.findViewById(R.id.picName);
                 item_title = (TextView) itemView.findViewById(R.id.title);
+                summary = (TextView) itemView.findViewById(R.id.summary);
+                author = (TextView) itemView.findViewById(R.id.author);
+                pageView = (TextView) itemView.findViewById(R.id.pageView);
             }
         }
 
@@ -178,6 +181,9 @@ public class BiblesActivity extends BaseActivity {
         public void onBindViewHolder(final ViewHolder holder, final int position) {
 
             holder.item_title.setText(list.get(position).getTitle());
+            holder.summary.setText(list.get(position).getSummary());
+            holder.author.setText("作者："+list.get(position).getAuthor());
+            holder.pageView.setText("阅读数："+list.get(position).getPageView());
 
 
             Glide.with(BiblesActivity.this)

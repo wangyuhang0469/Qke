@@ -64,12 +64,12 @@ public class MainActivity extends BaseActivity {
         isFirstStart();
 
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
 
         user = User.getInstance();
 
         verifyUser();
-
 
     }
 
@@ -213,16 +213,15 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    // 判断是否第一次启动来决定跳转不同的欢迎界面
+    // 判断是否第一次启动来决定跳转不同页面
     private void isFirstStart() {
+        //取出储存在SharedPreferences，key为firstStart的value值   字段默认初始值为true
         SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
-
         boolean isFirstStart = getPrefs.getBoolean("firstStart", true);
-
         if (isFirstStart) {
-
+            //自定义重载方法   第一参数为目标启动的Activity   第二个参数为Bundle型   第三个参数表示是否关闭此Activity
             startActivity(IntroActivity.class, null, false);
-
+            //将firstStart置为false
             SharedPreferences.Editor e = getPrefs.edit();
             e.putBoolean("firstStart", false);
             e.apply();

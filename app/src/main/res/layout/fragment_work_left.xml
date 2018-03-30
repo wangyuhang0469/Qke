@@ -35,7 +35,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="拨打0755-66565656"
+                android:text="拨打0755-96508888"
                 android:textColor="@color/text1"
                 android:gravity="center"
                 android:layout_marginLeft="7dp"/>

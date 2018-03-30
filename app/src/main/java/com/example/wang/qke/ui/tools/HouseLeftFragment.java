@@ -112,8 +112,6 @@ public class HouseLeftFragment extends BaseFragment implements MyListener {
             id01 = id1;
             id02 = id2;
             id03 = id3;
-
-
         }
     };
 
@@ -389,17 +387,12 @@ public class HouseLeftFragment extends BaseFragment implements MyListener {
 
     @OnClick(R.id.im_1)
     public void onView2Clicked() {
-
-
         if (!chooseHouse.getText().toString().equals("")){
             dalog = new ChooseHouseDalog(getContext(), R.style.FullScreenDialog, chooseHouse.getText().toString(), myListener);
             dalog.show();
         }else {
             toast("请先输入物业名关键字");
-
         }
-
-
     }
 
     @Override

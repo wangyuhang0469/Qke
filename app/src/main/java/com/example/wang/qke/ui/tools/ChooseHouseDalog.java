@@ -37,7 +37,7 @@ import java.util.Map;
 
 
 
-public class ChooseHouseDalog extends Dialog implements MyListener{
+public class ChooseHouseDalog extends Dialog{
 
 
 
@@ -146,7 +146,7 @@ public class ChooseHouseDalog extends Dialog implements MyListener{
                             HouseId = communityList.get(i).getCommunityId();
                             House_name =communityList.get(i).getCommunityName();
                             String result = construction_name+"|"+building_name+"|"+House_name;
-                            refreshActivity(result, construction_id, building_id, HouseId);
+                            mMyListener.refreshActivity(result, construction_id, building_id, HouseId);
                             ChooseHouseDalog.this.dismiss();
                         }else {
                             Toast.makeText(mContext, "请勿重复点击", Toast.LENGTH_SHORT).show();
@@ -455,10 +455,4 @@ public class ChooseHouseDalog extends Dialog implements MyListener{
 
 
 
-
-
-    @Override
-    public void refreshActivity(String text,String id1,String id2,String id3) {
-        mMyListener.refreshActivity(text,id1,id2,id3);
-    }
 }
