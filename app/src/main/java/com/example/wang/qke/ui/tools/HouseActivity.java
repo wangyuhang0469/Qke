@@ -44,6 +44,7 @@ public class HouseActivity extends BaseActivity {
     private List<Fragment> mFragments;
     private List<String> mTitles;
 
+
     private HouseRightFragment houseRightFragment= new HouseRightFragment();
 
 
